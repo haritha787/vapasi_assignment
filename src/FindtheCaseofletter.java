@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 public class FindtheCaseofletter
 {
-    public static void main(String[] args) {
+    //This function finds the case of user input letter
+    public static void main(String[] args)
+    {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a aplhabetical letter ");
+        System.out.print("Enter a alphabetical letter ");
         char letter = sc.next().charAt(0);
         int ascii = (int) letter;
         System.out.print("Entered letter is ");

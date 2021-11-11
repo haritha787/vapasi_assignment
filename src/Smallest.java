@@ -1,7 +1,6 @@
-public class Smallest {
+public class Smallest
+{
     //this class is used to find the smallest of all given numbers
-
-
         public static void main(String[] args)
         {
             int a=2;
@@ -33,6 +32,6 @@ public class Smallest {
 
         }
 
-    }
+}
 
 
