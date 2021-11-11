@@ -1,6 +1,6 @@
 public class Smallest {
+    //this class is used to find the smallest of all given numbers
 
-    public class Main {
 
         public static void main(String[] args)
         {
@@ -8,6 +8,7 @@ public class Smallest {
             int b=5;
             int c=8;
             int d=3;
+            System.out.println("The smallest number is");
             if(a<b && a<c)
             {
                 if(a<d)
@@ -29,9 +30,9 @@ public class Smallest {
                     System.out.println(c);
                 }
             }
-            System.out.println("is the smallest number");
+
         }
 
     }
 
-}
+
