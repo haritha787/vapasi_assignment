@@ -9,8 +9,12 @@ public class AscendingOrder
         Scanner sc = new Scanner(System.in);
         number = sc.nextInt();
         String string_number = Integer.toString(number);
-        int inputlength = string_number.length();
+
         char arr[]=new char[10];
+        for (int i = 0; i < 10; i++)
+        {
+            arr[i]='/';
+        }
         // Traversing through the string using for loop
         for (int i = 0; i < string_number.length(); i++)
         {
@@ -27,15 +31,20 @@ public class AscendingOrder
                     arr[i] = arr[j];
                     arr[j] = temp;
                 }
+
+
             }
 
         }
-
-        for (int i = 0; i < inputlength; i++)
+        for (int i=0; i < string_number.length(); i++)
         {
             System.out.println(arr[i]);
         }
-        arr=arr.replaceAll
+        String str = new String(arr);
+        String str1 = str.replace('/',' ');
+        System.out.println(str1);
+
+
     }
 
 }
