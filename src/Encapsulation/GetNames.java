@@ -20,11 +20,11 @@ public class GetNames {
             College5.setCollegeName("KALASALINGAM");
             College5.setDepartmentNames(new String[]{"CS", "EEE", "AUTO", "EI"});
             //print College name and Department Names of Corresponding College
-            System.out.println("College Name " + College1.getCollegeName()+" Department Name " + College1.getDepartmentNames());
-            System.out.println("College Name " + College2.getCollegeName()+" Department Name " + College2.getDepartmentNames());
-            System.out.println("College Name " + College3.getCollegeName()+" Department Name " + College3.getDepartmentNames());
-            System.out.println("College Name " + College4.getCollegeName()+" Department Name " + College4.getDepartmentNames());
-            System.out.println("College Name " + College5.getCollegeName()+" Department Name " + College5.getDepartmentNames());
+            System.out.println("College Name " + College1.getCollegeName()+" & Department Names " + College1.getDepartmentNames());
+            System.out.println("College Name " + College2.getCollegeName()+" & Department Names " + College2.getDepartmentNames());
+            System.out.println("College Name " + College3.getCollegeName()+" & Department Names " + College3.getDepartmentNames());
+            System.out.println("College Name " + College4.getCollegeName()+" & Department Names " + College4.getDepartmentNames());
+            System.out.println("College Name " + College5.getCollegeName()+" & Department Names " + College5.getDepartmentNames());
 
 
     }
