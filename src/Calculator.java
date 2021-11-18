@@ -10,12 +10,11 @@ public class Calculator
         {
             int input1 = 0;
             int input2 = 0;
-            int operation = 0;
             int output =0;
             Scanner sc = new Scanner(System.in);
             System.out.println("select an operation to perform");
             System.out.println("To add enter 1, multi enter 2, sub enter 3, divi enter 4");
-            operation = sc.nextInt();
+            int operation = sc.nextInt();
             System.out.print("Enter first number- ");
             input1 = sc.nextInt();
             System.out.print("Enter second number- ");
@@ -32,7 +31,10 @@ public class Calculator
                     output=input1-input2;
                     break;
                 case 4:
-                    output=input1/input2;
+                    if(input2 != 0)
+                        output=input1/input2;
+                    else
+                        System.out.println("cant div by 0");
                     break;
                 default:
                     System.out.println("You entered invalid operation, please retry");

@@ -1,3 +1,5 @@
+package src;
+
 public class Menu
 {
 
@@ -49,19 +51,25 @@ public class Menu
         return item;
     }
 
-    int finditemandbalance(int idnumber, int payment)
+    int finditemandbalance(int idnumber, int payment, int viewAmount)
     {
         int balance=0;
         for (int i = 0; i < 5; i++)
         {
-            if (idnumber == this.itemID[i])
+            if (idnumber == this.itemID[i]) //check corresponding itemID number
             {
-                if(payment>=this.price[i])
+                if(payment>=this.price[i])  //check for balance
                 {
-                    balance = payment-this.price[i];
-                    this.income = this.income+payment-balance;
-                    System.out.println("Total Income of vending machine is :"+this.income);
-                    this.validtodispense=1;
+                    balance = payment-this.price[i]; // price: 5; amt entered: 6; prev vm amt: 10;
+                    this.income = this.income+this.price[i];
+                    if(viewAmount==1)
+                    {
+                        System.out.println("Total Income of vending machine after your transaction is :" + this.income);
+                    }else
+                    {
+                        System.out.println("You chose not to see amount in Vending Machine, Thank you");
+                    }
+                    this.validtodispense=1; //user entered valid itemID and sufficient payment to dispense
                     break;
                 }else
                 {

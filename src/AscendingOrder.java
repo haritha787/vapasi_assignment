@@ -48,3 +48,7 @@ public class AscendingOrder
     }
 
 }
+
+
+/// re attempt this problem with out converting into char array.
+// convert into into array
