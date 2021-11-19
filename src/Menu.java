@@ -14,7 +14,7 @@ public class Menu
     int income;
     int validtodispense;
     ArrayList<String> transactionDetails = new ArrayList<>();
-   //  TreeMap<String> transactionDetails = new TreeMap();
+   
     Menu()
     {
 
