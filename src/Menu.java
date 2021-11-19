@@ -1,5 +1,10 @@
 package src;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.TreeMap;
+
 public class Menu
 {
 
@@ -8,7 +13,8 @@ public class Menu
     int[] price = new int[5];
     int income;
     int validtodispense;
-
+    ArrayList<String> transactionDetails = new ArrayList<>();
+   //  TreeMap<String> transactionDetails = new TreeMap();
     Menu()
     {
 
@@ -85,5 +91,31 @@ public class Menu
         }
 
         return balance;
+    }
+
+    void getPreviousTransactions(int balance, int itemID, int payment, int viewPreviousTransaction)
+    {
+
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:ss");
+        LocalDateTime time = LocalDateTime.now();
+        String balanceString =Integer.toString(balance);
+        String itemIDString =Integer.toString(itemID);
+        String paymentString=Integer.toString(payment);
+        String incomeString=Integer.toString(this.income);
+        String transactionTime = dateTimeFormatter.format(time)+", Balance Given: "+balanceString+", itemID: "+itemIDString+", Payment Customer Paid: "+paymentString+", Amount in Vending Machine after dispense: "+incomeString;
+        transactionDetails.add(transactionTime);
+        if(viewPreviousTransaction == 1)
+        {
+            System.out.println("Please find the previous transaction details ");
+            for (int i=0;i< transactionDetails.size();i++)
+            {
+                System.out.println(transactionDetails.get(i));
+            }
+        }else
+        {
+            System.out.println("You chose not to view Previous Transaction details");
+        }
+
     }
 }
