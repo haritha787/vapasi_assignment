@@ -18,7 +18,7 @@ class Bank1 extends Bank{
     @Override
     void getDenominationsOfBank()
     {
-        System.out.println("Denominations available in BANK1 - "+bankName+" : "+this.denominationsAvailable);
+        System.out.println("Denominations available in BANK1 - "+bankName+" : "+this.denominationsAvailable+" Currency: "+this.currency);
     }
 
 

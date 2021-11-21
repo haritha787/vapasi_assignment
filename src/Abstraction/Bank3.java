@@ -15,7 +15,7 @@ public class Bank3 extends Bank
 
     @Override
     void getDenominationsOfBank() {
-        System.out.println("Denominations available in BANK3 - "+bankName+" : "+this.denominationsAvailable);
+        System.out.println("Denominations available in BANK3 - "+bankName+" : "+this.denominationsAvailable+" Currency: "+this.currency);
     }
 
 
