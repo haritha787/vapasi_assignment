@@ -3,36 +3,28 @@ package src;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.TreeMap;
+import java.util.Collections;
+
 
 public class Menu
 {
 
-    int[] itemID = new int[5];
-    String[] name = new String[5];
-    int[] price = new int[5];
+
+    ArrayList<Integer> itemID = new ArrayList<>();
+
+    ArrayList<String> name = new ArrayList<>();
+    ArrayList<Integer> price = new ArrayList<>();
+
     int income;
     int validtodispense;
     ArrayList<String> transactionDetails = new ArrayList<>();
-   
+
     Menu()
     {
+        Collections.addAll(this.itemID, new Integer[]{111,222,333,444,555});
+        Collections.addAll(this.name, new String[]{"miranda", "fanta", "cola","orange", "chocolate"});
+        Collections.addAll(this.price, new Integer[]{40,100,99,111,5});
 
-        this.itemID[0] = 111;
-        this.itemID[1] = 222;
-        this.itemID[2] = 333;
-        this.itemID[3] = 444;
-        this.itemID[4] = 555;
-        this.name[0] = "miranda";
-        this.name[1] = "fanta";
-        this.name[2] = "cola";
-        this.name[3] = "orange";
-        this.name[4] = "chocolate";
-        this.price[0] = 40;
-        this.price[1] = 100;
-        this.price[2] = 99;
-        this.price[3] = 111;
-        this.price[4] = 5;
         this.income=1000;
         this.validtodispense=0;
     }
@@ -42,9 +34,9 @@ public class Menu
         String item = null;
         for (int i = 0; i < 5; i++)
         {
-            if (idnumber == this.itemID[i])
+            if (idnumber == this.itemID.get(i))
             {
-                item = this.name[i];
+                item = this.name.get(i);
                 break;
             }
 
@@ -62,12 +54,12 @@ public class Menu
         int balance=0;
         for (int i = 0; i < 5; i++)
         {
-            if (idnumber == this.itemID[i]) //check corresponding itemID number
+            if (idnumber == this.itemID.get(i)) //check corresponding itemID number
             {
-                if(payment>=this.price[i])  //check for balance
+                if(payment>=this.price.get(i))  //check for balance
                 {
-                    balance = payment-this.price[i]; // price: 5; amt entered: 6; prev vm amt: 10;
-                    this.income = this.income+this.price[i];
+                    balance = payment-this.price.get(i); // price: 5; amt entered: 6; prev vm amt: 10;
+                    this.income = this.income+this.price.get(i);
                     if(viewAmount==1)
                     {
                         System.out.println("Total Income of vending machine after your transaction is :" + this.income);
@@ -97,7 +89,7 @@ public class Menu
     {
 
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:ss");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime time = LocalDateTime.now();
         String balanceString =Integer.toString(balance);
         String itemIDString =Integer.toString(itemID);
